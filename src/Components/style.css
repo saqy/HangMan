@@ -1,0 +1,84 @@
+*{ margin: 0px; padding: 0px;  }
+.container { max-width: 840px; margin: 0 auto;  }
+.clear { clear: both;  }
+.hide { display: none;  }
+.header { padding:75px 0 60px 0;   }
+.header .text-wrap ul { text-align: center;  }
+.header .text-wrap ul li { display: inline-block; padding: 5px 10px; border-bottom: 5px solid #000;  min-height: 30px;
+    vertical-align: bottom; font-size: 18px; margin: 0px 5px; min-width: 30px; box-sizing: border-box;  }
+.character_detail { max-width: 400px; float: left;  } 
+.character_detail ul li { display: inline-block;  margin-left: 10px;
+margin-bottom: 10px;  text-align: center;  }
+.character_detail ul li button { text-decoration: none; background: transparent; font-size: 18px; color: #000; border:1px solid #000;
+padding: 8px 12px; display: block; min-width: 20px; transition: all ease .6s; }
+.character_detail ul li button:hover { background: #000; color: #fff;  }
+.character_detail .reset_info  { margin-top: 100px;  }
+.character_detail .reset_info li button{ border:0px;  }
+.character_animation  { float: right; width: 420px; }
+.character_animation .cloud_wrap {  }
+.character_animation .cloud_wrap .cloud1 { float: left; margin-left: 20px; margin-top: 40px;  }
+.character_animation .cloud_wrap .cloud2 { float: right;  }
+.animation_person { text-align: center; position: relative; width: 200px; margin: 0 auto;  margin-top:80px;  }
+.ballon_wrap { position: absolute; top: -90px; left: 45px;z-index: 9999;  }
+.ballon_wrap img { position: absolute; top: -100px;   }
+.ballon_wrap .ballon1 {     transform: rotate(-21deg); left: -27px;  }
+.ballon_wrap .ballon2 {  transform: rotate(16deg);   }
+.ballon_wrap .ballon3 {   transform: rotate(0deg);  }
+.ballon_wrap .ballon4 {   transform: rotate(-12deg);  }
+.ballon_wrap .ballon5 {   transform: rotate(45deg);  }
+.footer { position: fixed; bottom: 0px; width: 100%; z-index: -11; background: url('../images/footer.png') no-repeat #000; min-height: 200px; background-position: 66% 0%;  }
+
+
+/*Animation*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+  }
+
+  20%,
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+  }
+
+
+
+  60%,100% {
+    -webkit-transform: translate3d(50px, 360px, 0);
+    transform: translate3d(50px, 360px, 0);
+    opacity: 1;     
+content: url('../images/man1.png');
+  }
+}
+
+.hinge {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+      
+}
